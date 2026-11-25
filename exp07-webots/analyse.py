@@ -177,7 +177,7 @@ def main(analysis_dir):
                     color='tab:red', label='worst-robot stuck time (%)')
         ax.set_xlabel('cruise speed parameter (fraction of max wheel speed, 6.28 rad/s)')
         ax.set_ylabel('percentage (%)'); ax.set_ylim(-3, 103); ax.grid(alpha=0.3); ax.legend(fontsize=8)
-        ax.set_title('Exercise 1: speed against safety, 120 s runs (mean ± SD, 3–5 repeats)')
+        ax.set_title('Exercise 1: speed against safety, 120 s runs (mean ± SD over 1–5 complete runs)')
         fig.tight_layout(); fig.savefig(FIGS / 'fig7_4_ex1_speed_vs_safety.png'); plt.close(fig)
 
     # Exercise 5: lidar noise

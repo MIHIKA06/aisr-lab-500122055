@@ -32,3 +32,6 @@ These CSVs are partial (the run was killed before the full simulated time) and a
 - swarm_cruise-1.0_r3 (10 s)
 
 Headless attempts: 59, failed or hung: 31. Headless runs only worked while a normal Webots window was also open.
+
+## Exercise 5 (noisy lidar)
+Re-run on 25/11/2026 with the Webots window open: 6 runs (noise 0.001 and 0.003, 3 each), all complete (180 s).

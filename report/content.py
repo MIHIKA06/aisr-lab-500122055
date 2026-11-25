@@ -884,7 +884,9 @@ if cr:
                               f"{ms('swarm', f'cruise-{c}', 'stuck_worst')}%" for c in cr)])
 nz = [n for n in ('0.001', '0.003') if nrep('pioneer', f'noise-{n}')]
 if nz:
-    ex_rows.append(['5. Noisy lidar', 'SICK LMS 291 noise = ' + ', '.join(nz) + ' (≈ 8 and 24 cm), 180 s',
+    ex_rows.append(['5. Noisy lidar', 'SICK LMS 291 noise = ' + ', '.join(nz) + ' (≈ 8 and 24 cm), 180 s, '
+                    + ', '.join(f"n = {nrep('pioneer', f'noise-{n}')}" for n in nz) + '; default (no noise): coverage '
+                    + ms('pioneer', 'default', 'coverage', '{:.0f}') + '%',
                     '; '.join(f"noise {n}: coverage {ms('pioneer', f'noise-{n}', 'coverage', '{:.0f}')}%, stuck "
                               f"{ms('pioneer', f'noise-{n}', 'stuck_worst')}%, path {ms('pioneer', f'noise-{n}', 'path_mean', '{:.1f}')} m"
                               for n in nz)])
@@ -938,7 +940,8 @@ E7 = dict(
         'complete.',
         'Exercises from GUIDE.md §10: (1) cruise = 0.2, 0.4, 0.6 and 0.8 for the swarm, up to 3 complete runs each (Table 7.3, '
         'Figure 7.4; the cruise = 1.0 runs did not complete); '
-        '(5) lidar noise 0.001 and 0.003, for which I added a --lidar-noise option to the runner, but these runs did not complete.',
+        '(5) lidar noise 0.001 and 0.003 on the Pioneer, 180 s, 3 runs each, using a --lidar-noise option I added to the runner '
+        '(Table 7.3, Figure 7.5).',
         'Computed metrics and mean ± SD with my exp07-webots/analyse.py, which uses the same definitions as analysis/metrics.py.',
     ],
     code_intro='Key part of the code: my metric function (exp07-webots/analyse.py). The robot controllers were used unchanged; '
@@ -960,6 +963,7 @@ E7 = dict(
         ('fig', FIG7 / 'fig7_2_swarm_trajectories.png', ('Figure 7.2', 'Swarm trajectories and coverage, default parameters, 120 s (my GUI run)'), 15),
         ('fig', FIG7 / 'fig7_3_pioneer_default.png', ('Figure 7.3', 'Pioneer trajectory in the 8 m × 8 m room, default parameters, 180 s'), 15),
         ('fig', FIG7 / 'fig7_4_ex1_speed_vs_safety.png', ('Figure 7.4', 'Result plot for exercise 1: coverage and worst-robot stuck time against cruise speed'), 13),
+        ('fig', FIG7 / 'fig7_5_ex5_lidar_noise.png', ('Figure 7.5', 'Result plot for exercise 5: Pioneer coverage and stuck time against lidar noise'), 11.5),
     ],
     discussion=[],
     answers=[],

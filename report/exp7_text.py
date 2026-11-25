@@ -32,6 +32,10 @@ def fill(E, agg, ms, nrep, runs):
     if b_cov is not None:
         res += f' With bubble = 0.15 m it covered {f(b_cov)}% and was stuck {f(b_stk, "{:.0f}")}% of the time (Table 7.2).'
     res += ' Figure 7.4 shows coverage and worst-robot stuck time against cruise speed (exercise 1).'
+    n1, n3 = m('pioneer', 'noise-0.001', 'coverage'), m('pioneer', 'noise-0.003', 'coverage')
+    if n1 is not None and n3 is not None:
+        res += (f' With lidar noise of about 8 cm and 24 cm per beam the Pioneer still never got stuck, and its coverage fell only '
+                f'from {f(p_cov, "{:.1f}")}% to {f(n1, "{:.1f}")}% and {f(n3, "{:.1f}")}% (exercise 5, Figure 7.5).')
     E['results'].append(('para', res))
 
     disc = [
@@ -66,6 +70,15 @@ def fill(E, agg, ms, nrep, runs):
         disc.append('Repeatability was mixed: repeats were identical for ' + (', '.join(same) or 'none') + ' and differed for '
                     + ', '.join(varied) + '. A run only diverges if a timing difference between controller processes changes a close '
                     'call, so I report every repeat and the mean ± SD rather than one run.')
+    if n1 is not None and n3 is not None:
+        disc.append('Exercise 5 asked whether follow-the-gap tolerates a noisy lidar. I expected noise to make the free/blocked '
+                    'decision flicker near the 1 m threshold and cause hesitation or collisions. Instead the controller was barely '
+                    f'affected: stuck time stayed at 0% and coverage changed from {f(p_cov, "{:.1f}")}% to {f(n1, "{:.1f}")}% (≈ 8 cm '
+                    f'noise) and {f(n3, "{:.1f}")}% (≈ 24 cm), with the path length within 2%. The noise is small compared with the '
+                    '1 m "free" threshold and the 0.45 m bubble, and the widest-gap choice averages over many beams, so single noisy '
+                    'beams rarely change the chosen heading. The noise did shift the trajectory slightly (the paths differ from the '
+                    'noise-free run), but not the looping behaviour. The noisy repeats were also identical to each other, which shows '
+                    'that Webots draws its sensor noise from a generator seeded the same way at every start (WorldInfo randomSeed).')
     if extra.get('incomplete'):
         disc.append(f'{len(extra["incomplete"])} runs stopped before the full simulated time when a hung Webots instance was killed '
                     '(' + ', '.join(extra['incomplete']) + '). Their logs are partial, so I excluded them from every table and plot.')

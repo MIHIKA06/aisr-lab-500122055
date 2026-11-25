@@ -2,6 +2,12 @@ world,setting,run,coverage_pct,path_mean_m,speed_mean_mps,stuck_mean_pct,stuck_w
 pioneer,default,1,23.4,83.58,0.466,0.0,0.0,pioneer_default_r1.csv
 pioneer,default,2,23.4,83.58,0.466,0.0,0.0,pioneer_default_r2.csv
 pioneer,default,3,23.4,83.58,0.466,0.0,0.0,pioneer_default_r3.csv
+pioneer,noise-0.001,1,22.7,83.76,0.467,0.0,0.0,pioneer_noise-0.001_r1.csv
+pioneer,noise-0.001,2,22.7,83.76,0.467,0.0,0.0,pioneer_noise-0.001_r2.csv
+pioneer,noise-0.001,3,22.7,83.76,0.467,0.0,0.0,pioneer_noise-0.001_r3.csv
+pioneer,noise-0.003,1,21.1,82.00,0.457,0.0,0.0,pioneer_noise-0.003_r1.csv
+pioneer,noise-0.003,2,21.1,82.00,0.457,0.0,0.0,pioneer_noise-0.003_r2.csv
+pioneer,noise-0.003,3,21.1,82.00,0.457,0.0,0.0,pioneer_noise-0.003_r3.csv
 swarm,cruise-0.2,3,56.2,2.73,0.023,0.1,0.3,swarm_cruise-0.2_r3.csv
 swarm,cruise-0.4,1,77.0,5.23,0.044,1.0,1.6,swarm_cruise-0.4_r1.csv
 swarm,cruise-0.4,2,77.0,5.23,0.044,1.0,1.6,swarm_cruise-0.4_r2.csv

@@ -58,6 +58,120 @@
    "file": "pioneer_default_r3.csv"
   },
   {
+   "world": "pioneer",
+   "setting": "noise-0.001",
+   "run": 1,
+   "coverage": 22.65625,
+   "path_mean": 83.75819217971157,
+   "path_total": 83.75819217971157,
+   "speed_mean": 0.4665674698067712,
+   "stuck_mean": 0.0,
+   "stuck_worst": 0.0,
+   "robots": {
+    "pioneer": {
+     "path": 83.75819217971157,
+     "speed": 0.4665674698067712,
+     "stuck": 0.0
+    }
+   },
+   "file": "pioneer_noise-0.001_r1.csv"
+  },
+  {
+   "world": "pioneer",
+   "setting": "noise-0.001",
+   "run": 2,
+   "coverage": 22.65625,
+   "path_mean": 83.75819217971157,
+   "path_total": 83.75819217971157,
+   "speed_mean": 0.4665674698067712,
+   "stuck_mean": 0.0,
+   "stuck_worst": 0.0,
+   "robots": {
+    "pioneer": {
+     "path": 83.75819217971157,
+     "speed": 0.4665674698067712,
+     "stuck": 0.0
+    }
+   },
+   "file": "pioneer_noise-0.001_r2.csv"
+  },
+  {
+   "world": "pioneer",
+   "setting": "noise-0.001",
+   "run": 3,
+   "coverage": 22.65625,
+   "path_mean": 83.75819217971157,
+   "path_total": 83.75819217971157,
+   "speed_mean": 0.4665674698067712,
+   "stuck_mean": 0.0,
+   "stuck_worst": 0.0,
+   "robots": {
+    "pioneer": {
+     "path": 83.75819217971157,
+     "speed": 0.4665674698067712,
+     "stuck": 0.0
+    }
+   },
+   "file": "pioneer_noise-0.001_r3.csv"
+  },
+  {
+   "world": "pioneer",
+   "setting": "noise-0.003",
+   "run": 1,
+   "coverage": 21.09375,
+   "path_mean": 82.00435672162176,
+   "path_total": 82.00435672162176,
+   "speed_mean": 0.45679788726393583,
+   "stuck_mean": 0.0,
+   "stuck_worst": 0.0,
+   "robots": {
+    "pioneer": {
+     "path": 82.00435672162176,
+     "speed": 0.45679788726393583,
+     "stuck": 0.0
+    }
+   },
+   "file": "pioneer_noise-0.003_r1.csv"
+  },
+  {
+   "world": "pioneer",
+   "setting": "noise-0.003",
+   "run": 2,
+   "coverage": 21.09375,
+   "path_mean": 82.00435672162176,
+   "path_total": 82.00435672162176,
+   "speed_mean": 0.45679788726393583,
+   "stuck_mean": 0.0,
+   "stuck_worst": 0.0,
+   "robots": {
+    "pioneer": {
+     "path": 82.00435672162176,
+     "speed": 0.45679788726393583,
+     "stuck": 0.0
+    }
+   },
+   "file": "pioneer_noise-0.003_r2.csv"
+  },
+  {
+   "world": "pioneer",
+   "setting": "noise-0.003",
+   "run": 3,
+   "coverage": 21.09375,
+   "path_mean": 82.00435672162176,
+   "path_total": 82.00435672162176,
+   "speed_mean": 0.45679788726393583,
+   "stuck_mean": 0.0,
+   "stuck_worst": 0.0,
+   "robots": {
+    "pioneer": {
+     "path": 82.00435672162176,
+     "speed": 0.45679788726393583,
+     "stuck": 0.0
+    }
+   },
+   "file": "pioneer_noise-0.003_r3.csv"
+  },
+  {
    "world": "swarm",
    "setting": "cruise-0.2",
    "run": 3,
@@ -827,6 +941,60 @@
     3
    ]
   },
+  "pioneer:noise-0.001": {
+   "path_mean": [
+    83.75819217971157,
+    0.0,
+    3
+   ],
+   "speed_mean": [
+    0.4665674698067712,
+    0.0,
+    3
+   ],
+   "stuck_mean": [
+    0.0,
+    0.0,
+    3
+   ],
+   "stuck_worst": [
+    0.0,
+    0.0,
+    3
+   ],
+   "coverage": [
+    22.65625,
+    0.0,
+    3
+   ]
+  },
+  "pioneer:noise-0.003": {
+   "path_mean": [
+    82.00435672162176,
+    0.0,
+    3
+   ],
+   "speed_mean": [
+    0.45679788726393583,
+    0.0,
+    3
+   ],
+   "stuck_mean": [
+    0.0,
+    0.0,
+    3
+   ],
+   "stuck_worst": [
+    0.0,
+    0.0,
+    3
+   ],
+   "coverage": [
+    21.09375,
+    0.0,
+    3
+   ]
+  },
   "swarm:cruise-0.2": {
    "path_mean": [
     2.7294591021809156,
@@ -995,7 +1163,7 @@
   "path_mean": 6.501463582801312,
   "stuck_worst": 2.941176470588235
  },
- "attempts": 59,
+ "attempts": 65,
  "failed": 31,
  "incomplete": [
   "pioneer_bubble-0.15_r1 (78 s)",
