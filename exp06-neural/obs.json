@@ -1,0 +1,86 @@
+{
+ "shape": "2-4-1",
+ "activations": "sigmoid (hidden and output)",
+ "seed": 1,
+ "epochs": 20000,
+ "loss": "mean squared error",
+ "rows": [
+  {
+   "lr": 0.05,
+   "final_mse": 0.002314868988271692,
+   "correct": true,
+   "converged": false,
+   "epoch_mse_below_1e2": 10851,
+   "outputs": [
+    0.039,
+    0.953,
+    0.954,
+    0.058
+   ]
+  },
+  {
+   "lr": 0.5,
+   "final_mse": 0.00011144618732742155,
+   "correct": true,
+   "converged": true,
+   "epoch_mse_below_1e2": 1086,
+   "outputs": [
+    0.008,
+    0.989,
+    0.991,
+    0.013
+   ]
+  },
+  {
+   "lr": 2.0,
+   "final_mse": 2.455286480396731e-05,
+   "correct": true,
+   "converged": true,
+   "epoch_mse_below_1e2": 272,
+   "outputs": [
+    0.004,
+    0.995,
+    0.996,
+    0.006
+   ]
+  },
+  {
+   "lr": 10.0,
+   "final_mse": 5.807149088053418e-06,
+   "correct": true,
+   "converged": true,
+   "epoch_mse_below_1e2": 70,
+   "outputs": [
+    0.002,
+    0.998,
+    0.998,
+    0.003
+   ]
+  }
+ ],
+ "best_lr": 10.0,
+ "best_pred": [
+  0.002,
+  0.998,
+  0.998,
+  0.003
+ ],
+ "single_unit": {
+  "outputs": [
+   0.5,
+   0.5,
+   0.5,
+   0.5
+  ],
+  "mse": 0.25
+ },
+ "zero_init": {
+  "mse": 0.25,
+  "outputs": [
+   0.5,
+   0.5,
+   0.5,
+   0.5
+  ]
+ }
+}

@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+report/build/
+report/pages/
+report/*.pdf
+report/*.docx
+report/__pycache__/
+report/template.docx
+report/tpl/
+report/signature.png
+report/dump.py
+report/raw.py

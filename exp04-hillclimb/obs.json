@@ -1,0 +1,43 @@
+{
+ "trials": 200,
+ "successes": 25,
+ "p": 0.125,
+ "successes_repeat": 32,
+ "sideways_successes": 189,
+ "restarts": [
+  {
+   "k": 1,
+   "trials": 200,
+   "measured": 14.499999999999998,
+   "predicted": 12.5
+  },
+  {
+   "k": 2,
+   "trials": 200,
+   "measured": 25.5,
+   "predicted": 23.4375
+  },
+  {
+   "k": 5,
+   "trials": 200,
+   "measured": 56.00000000000001,
+   "predicted": 48.7091064453125
+  },
+  {
+   "k": 10,
+   "trials": 200,
+   "measured": 78.0,
+   "predicted": 73.69244238361716
+  },
+  {
+   "k": 20,
+   "trials": 200,
+   "measured": 97.5,
+   "predicted": 93.07912412260697
+  }
+ ],
+ "k99": 35,
+ "n_local_maxima": 7,
+ "x_global": 7.646076794657763,
+ "oned_reach_global": 0.24
+}

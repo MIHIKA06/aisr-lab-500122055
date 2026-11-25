@@ -1,0 +1,33 @@
+diff --git a/tools/run_experiment.py b/tools/run_experiment.py
+index 90bd830..77ebbac 100644
+--- a/tools/run_experiment.py
++++ b/tools/run_experiment.py
+@@ -58,6 +58,8 @@ def main():
+     ap.add_argument("--seconds", type=float, default=120, help="simulated seconds to run")
+     ap.add_argument("--set", nargs="*", default=[], metavar="NAME=VALUE", help="controller parameters")
+     ap.add_argument("--name", default=None, help="label for the output CSV")
++    ap.add_argument("--lidar-noise", type=float, default=None,
++                    help="pioneer only: SickLms291 noise (fraction of 80 m range), GUIDE exercise 5")
+     a = ap.parse_args()
+ 
+     wfile, ctrl = WORLDS[a.world]
+@@ -71,15 +73,17 @@ def main():
+     log_args = f'"--seconds={a.seconds}" "--out={out}" "--quit=1"'
+     src = re.sub(r'controller "trajectory_logger"(\s*controllerArgs \[[^\]]*\])?',
+                  f'controller "trajectory_logger" controllerArgs [ {log_args} ]', src)
++    if a.lidar_noise is not None:
++        src = src.replace("SickLms291 {", f"SickLms291 {{\n      noise {a.lidar_noise}", 1)
+     tmp = os.path.join(ROOT, "worlds", f"_experiment_{a.world}.wbt")
+     with open(tmp, "w") as f:
+         f.write(src)
+ 
+-    cmd = [find_webots(), "--mode=fast", "--no-rendering", "--batch", "--minimize",
++    cmd = [find_webots(), "--mode=fast", "--no-rendering", "--batch",
+            "--stdout", "--stderr", tmp]
+     print(f"Running {a.world} for {a.seconds:.0f} s with {a.set or 'default parameters'} ...")
+     try:
+-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=max(120, a.seconds * 3))
++        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=max(90, a.seconds * 0.75))
+         errors = [l for l in (proc.stdout + proc.stderr).splitlines() if "ERROR" in l]
+         if errors:
+             print("\n".join(errors))

@@ -1,0 +1,29 @@
+{
+ "H": 23,
+ "W": 35,
+ "open_cells": 395,
+ "start": [
+  1,
+  1
+ ],
+ "goal": [
+  21,
+  33
+ ],
+ "results": {
+  "bfs": {
+   "expanded": 395,
+   "path_cells": 65,
+   "path_steps": 64,
+   "valid": true,
+   "max_frontier": 16
+  },
+  "dfs": {
+   "expanded": 222,
+   "path_cells": 115,
+   "path_steps": 114,
+   "valid": true,
+   "max_frontier": 15
+  }
+ }
+}

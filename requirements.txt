@@ -1,0 +1,7 @@
+numpy==2.5.5
+scipy==1.18.1
+matplotlib==3.11.2
+jupyterlab
+nbformat
+nbconvert
+ipykernel

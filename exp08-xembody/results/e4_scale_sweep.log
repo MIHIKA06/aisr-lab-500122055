@@ -1,0 +1,21 @@
+pybullet build time: Nov 25 2026 12:00:50
+  scale 0.60: success 0.00
+  scale 0.70: success 0.30
+  scale 0.75: success 0.75
+  scale 0.80: success 0.95
+  scale 0.85: success 1.00
+  scale 0.90: success 1.00
+  scale 1.00: success 1.00
+
+E4: expert via task space on KUKA at different scales (20 episodes)
+scale  success_rate  mean_steps  median_error_cm
+-----  ------------  ----------  ---------------
+0.600  0.000         nan         29.1           
+0.700  0.300         43.8        1.539          
+0.750  0.750         44.5        0.304          
+0.800  0.950         46.2        0.162          
+0.850  1.000         46.6        0.153          
+0.900  1.000         47.5        0.141          
+1.000  1.000         50.5        0.150          
+
+Saved results/e4_scale_sweep.csv/.png
